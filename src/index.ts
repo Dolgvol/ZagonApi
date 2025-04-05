@@ -11,7 +11,7 @@ fastify.get('/', async (request, reply) => {
 
 /**
  * Run the server!
- * 
+ *
  */
 const start = async () => {
 	try {

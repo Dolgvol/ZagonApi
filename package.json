@@ -6,10 +6,11 @@
 	"type": "module",
 	"scripts": {
 		"start": "nodemon",
-		"serve": "node src/index.js",
-		"format": "npx prettier --write \"./src/**/*.{js,cjs,mjs,json}\"",
-		"lint": "eslint \"./src/**/*.{js,cjs,mjs,json}\"",
-		"lint:fix": "eslint \"./src/**/*.{js,cjs,mjs,json}\" --fix"
+		"build": "tsc",
+		"serve": "npm run build && node dist/index.js",
+		"format": "npx prettier --write ./src/**",
+		"lint": "eslint ./src/**",
+		"lint:fix": "eslint ./src/** --fix"
 	},
 	"repository": {
 		"type": "git",
