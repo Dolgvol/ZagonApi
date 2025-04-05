@@ -6,7 +6,6 @@
 - **npm lint** : Performs a code check using `eslint` to detect potential errors and style issues.
 - **npm lint:fix** : Same as `lint`, but with automatic fixing of detected issues.
 
-
 ### Models (pseudocode):
 
 ```
@@ -53,8 +52,8 @@ type ProjectCategory {
     projectCategoryId: ID
     createdAt: Date
     updatedAt: Date
-    createdBy: userId
-    updatedBy: userId
+    createdBy: User
+    updatedBy: User
     projectCategoryName: String
     description?: String
 }
@@ -68,10 +67,11 @@ type Project {
     projectId: ID
     createdAt: Date
     updatedAt: Date
-    createdBy: userId
-    updatedBy: userId
+    createdBy: User
+    updatedBy: User
     projectName: String
-    status: projectStatusId
+    avatar?: Media
+    status: ProjectStatus
     description?: String
     externalLinks?: [String]
     category: [ProjectCategory]
@@ -88,7 +88,11 @@ type VacancyStatus {
 
 type Vacancy {
     vacancyId: ID
-    status: vacancyStatusId
+    createdAt: Date
+    updatedAt: Date
+    createdBy: User
+    updatedBy: User
+    status: VacancyStatus
     description: String
     techExpMap: Dictionary<Technology,Expirience>
 }
@@ -101,5 +105,19 @@ type Technology {
 type Expirience {
     expirienceId: ID
     expirienceName: String
+}
+
+type Media {
+    mediaId: ID,
+    createdAt: Date
+    updatedAt: Date
+    createdBy: User
+    updatedBy: User
+    owner: User
+    url: String,
+    fileName: String,
+    fileType: String
+    userAvatar?: User
+    projectAvatars?: [Project]
 }
 ```

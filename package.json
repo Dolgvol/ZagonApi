@@ -1,44 +1,51 @@
 {
-  "name": "zagonapi",
-  "version": "1.0.0",
-  "description": "api for zagon",
-  "main": "src/index.js",
-  "type": "module",
-  "scripts": {
-    "start": "nodemon",
-    "serve": "node src/index.js",
-    "format": "npx prettier --write \"./src/**/*.{js,cjs,mjs,json}\"",
-    "lint": "eslint \"./src/**/*.{js,cjs,mjs,json}\"",
-    "lint:fix": "eslint \"./src/**/*.{js,cjs,mjs,json}\" --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dolgvol/ZagonApi.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Dolgvol/ZagonApi/issues"
-  },
-  "homepage": "https://github.com/Dolgvol/ZagonApi#readme",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "fastify": "^5.2.2",
-    "pg": "^8.14.1",
-    "ws": "^8.18.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.23.0",
-    "eslint": "^9.23.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-prettier": "^5.2.6",
-    "globals": "^16.0.0",
-    "nodemon": "^3.1.9",
-    "prettier": "^3.5.3"
-  },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.9",
-    "utf-8-validate": "^6.0.5"
-  },
-  "private": true
+	"name": "zagonapi",
+	"version": "1.0.0",
+	"description": "api for zagon",
+	"main": "src/index.js",
+	"type": "module",
+	"scripts": {
+		"start": "nodemon",
+		"serve": "node src/index.js",
+		"format": "npx prettier --write \"./src/**/*.{js,cjs,mjs,json}\"",
+		"lint": "eslint \"./src/**/*.{js,cjs,mjs,json}\"",
+		"lint:fix": "eslint \"./src/**/*.{js,cjs,mjs,json}\" --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Dolgvol/ZagonApi.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Dolgvol/ZagonApi/issues"
+	},
+	"homepage": "https://github.com/Dolgvol/ZagonApi#readme",
+	"dependencies": {
+		"dotenv": "^16.4.7",
+		"fastify": "^5.2.2",
+		"pg": "^8.14.1",
+		"ws": "^8.18.1"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.24.0",
+		"@types/node": "^22.14.0",
+		"@types/pg": "^8.11.11",
+		"@typescript-eslint/eslint-plugin": "^8.29.0",
+		"@typescript-eslint/parser": "^8.29.0",
+		"eslint": "^9.24.0",
+		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-prettier": "^5.2.6",
+		"globals": "^16.0.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^3.5.3",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.29.0"
+	},
+	"optionalDependencies": {
+		"bufferutil": "^4.0.9",
+		"utf-8-validate": "^6.0.5"
+	},
+	"private": true
 }
