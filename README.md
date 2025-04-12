@@ -1,6 +1,7 @@
 ### Scripts:
 
 - **npm start** : Runs the project using `nodemon` with watching enabled.
+- **npm build** : Compiles .ts files from /src to .js files in /dist.
 - **npm serve** : Simply runs the application using `node`, without watch.
 - **npm format** : Formats the code using `prettier` with the defined style.
 - **npm lint** : Performs a code check using `eslint` to detect potential errors and style issues.

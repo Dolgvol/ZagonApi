@@ -4,38 +4,44 @@
 	"description": "api for zagon",
 	"main": "src/index.js",
 	"type": "module",
+	"private": true,
+	"author": "",
+	"license": "ISC",
 	"scripts": {
 		"start": "nodemon",
 		"build": "tsc",
-		"serve": "npm run build && node dist/index.js",
-		"format": "npx prettier --write ./src/**",
-		"lint": "eslint ./src/**",
-		"lint:fix": "eslint ./src/** --fix"
+		"serve": "npm run build && node ./dist/index.js",
+		"format": "npx prettier --write \"./src/**/*.{ts,json}\"",
+		"lint": "eslint \"./src/**/*.{ts,json}\"",
+		"lint:fix": "eslint \"./src/**/*.{ts,json}\" --fix"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Dolgvol/ZagonApi.git"
 	},
-	"author": "",
-	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/Dolgvol/ZagonApi/issues"
 	},
 	"homepage": "https://github.com/Dolgvol/ZagonApi#readme",
 	"dependencies": {
+		"@fastify/postgres": "^6.0.2",
 		"dotenv": "^16.4.7",
+		"drizzle-orm": "^0.41.0",
 		"fastify": "^5.2.2",
 		"pg": "^8.14.1",
 		"ws": "^8.18.1"
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.24.0",
+		"@eslint/json": "^0.11.0",
 		"@types/node": "^22.14.0",
 		"@types/pg": "^8.11.11",
 		"@typescript-eslint/eslint-plugin": "^8.29.0",
 		"@typescript-eslint/parser": "^8.29.0",
+		"drizzle-kit": "^0.30.6",
 		"eslint": "^9.24.0",
 		"eslint-config-prettier": "^10.1.1",
+		"eslint-plugin-jsonc": "^2.20.0",
 		"eslint-plugin-prettier": "^5.2.6",
 		"globals": "^16.0.0",
 		"nodemon": "^3.1.9",
@@ -47,6 +53,5 @@
 	"optionalDependencies": {
 		"bufferutil": "^4.0.9",
 		"utf-8-validate": "^6.0.5"
-	},
-	"private": true
+	}
 }
